@@ -1,0 +1,122 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.login {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    background: no-repeat center/cover url(../../assets/background.png);
+
+    .login-container {
+        width: 60vw;
+        height: 60vh;
+        border-radius: 40px;
+        background-color: #fff;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        box-shadow: 0 0 50px rgb(0 0 0 / 30%);
+        display: flex;
+
+        .left-img {
+            flex: 1;
+            border-radius: 40px;
+            background: no-repeat center/cover url(../../assets/logo.png);
+            position: relative;
+
+            .glass {
+                width: 60%;
+                padding: 20px;
+                position: absolute;
+                top: 20%;
+                left: 50%;
+                transform: translate(-50%, -20%);
+                background: rgba(255, 255, 255, 0.1);
+                box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+                backdrop-filter: blur(10px);
+                border-radius: 15px;
+                border: 1px solid rgba(255, 255, 255, 0.48);
+
+                .tips {
+                    .title {
+                        width: 25%;
+                        font-weight: 600;
+                        font-size: 15px;
+                        text-align: center;
+                        padding: 10px;
+                        overflow: hidden;
+                        background: rgba(255, 255, 255, 0.1);
+                        box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+                        backdrop-filter: blur(10px);
+                        border-radius: 15px;
+
+                        h1 {
+                            margin: 15px 0;
+                        }
+
+                        span {
+                            margin: 5px 0;
+                            display: block;
+                            font-weight: 100;
+                        }
+                    }
+                }
+            }
+        }
+
+        .login-form {
+            flex: 1;
+            position: relative;
+
+            .form-wrapper {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+
+                h1 {
+                    position: relative;
+                    bottom: 10px;
+                    font-size: 30px;
+                    text-align: center;
+                }
+
+                .input-item {
+                    width: 300px;
+                    height: 40px;
+                    border-radius: 10px;
+                }
+
+                .button{
+                    position: absolute;
+                    margin-bottom: 30%;
+                }
+            }
+
+            .input-tips {
+                display: inline-block;
+                font-weight: 600;
+                font-size: 20px;
+            }
+
+            .forgot {
+                position: absolute;
+                font-weight: 600;
+                font-size: 13px;
+                top: 65%;
+                right: 2px;
+            }
+
+            .sign-up {
+                position: relative;
+                top: 10px;
+                text-align: center;
+                font-weight: 600;
+                margin: 10px 0;
+            }
+        }
+    }
+}
