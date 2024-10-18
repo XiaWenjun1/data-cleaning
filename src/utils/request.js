@@ -2,7 +2,7 @@
 import axios from 'axios'
 
 const request = axios.create({
-    baseUrl: 'https://jsonplaceholder.typicode.com/todos/1',
+    baseUrl: '',
     timeout: 5000
 })
 

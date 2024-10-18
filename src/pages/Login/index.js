@@ -49,6 +49,7 @@ const Login = () => {
                                         message: 'Please enter a valid email address!'
                                     }
                                 ]}
+                                hasFeedback
                             >
                                 <Input size="large" placeholder="Please enter your email address" />
                             </Form.Item>
@@ -59,8 +60,9 @@ const Login = () => {
                                 className="input-item"
                                 name="password"
                                 rules={[{ required: true, message: 'Please input your password!' }]}
+                                hasFeedback
                             >
-                                <Input size="large" placeholder="Please enter your password" />
+                                <Input.Password size="large" placeholder="Please enter your password" />
                             </Form.Item>
                             
                             <div className="forgot">

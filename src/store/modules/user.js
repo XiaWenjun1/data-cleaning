@@ -4,7 +4,9 @@ import { request } from '@/utils'
 const userStore = createSlice({
     name:"user",
     initialState:{
-        token:''
+        token:'',
+        userInfo: null,
+        isLoggedIn: false
     },
 
     reducers:{
@@ -21,10 +23,14 @@ const userReducer = userStore.reducer
 //Asynchronous method to complete the login and obtain the token
 const fetchLogin = (loginForm)=>{
     return async (dispatch) =>{
-        //Sending asynchronous requests
-        const res = await request.post('', loginForm)
-        //Submit synchronous action to deposit token
-        dispatch(setToken(res.data.token))
+        try{
+            //Sending asynchronous requests
+            const res = await request.post('/', loginForm)
+            //Submit synchronous action to deposit token
+            dispatch(setToken(res.data.token))
+        }catch(error) {
+            console.error("Login request failed:", error)
+        }
     }
 }
 
